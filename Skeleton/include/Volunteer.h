@@ -13,7 +13,7 @@ class Volunteer {
     public:
         Volunteer(int id, const string &name);
         int getId() const {return id};
-        const string &getName() const{return name};
+        const string &getName() const{return &name};
         int getActiveRequestId() const{return activeRequestId};
         int getCompletedRequestId() const{return completedRequestId};
         bool isBusy() const; // Signal whether the volunteer is currently processing a Request    
