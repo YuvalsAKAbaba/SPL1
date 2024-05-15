@@ -4,6 +4,7 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**"
+                "C:\\Users\\yuval\\OneDrive\\Desktop\\CPP\\Cloning folder\\SPL1\\Skeleton\\include"
             ],
             "defines": [
                 "_DEBUG",

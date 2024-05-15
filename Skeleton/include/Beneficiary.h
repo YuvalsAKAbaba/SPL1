@@ -11,12 +11,20 @@ using std::vector;
 class Beneficiary {
     public:
         Beneficiary(int id, const string &name, int locationDistance, int maxRequests);
-        const string &getName() const;
-        int getId() const;
-        int getBeneficiaryDistance() const;
-        int getMaxRequests() const; //Returns maxRequests
-        int getNumRequests() const; //Returns num of requests the Beneficiary has made so far
-        bool canMakeRequest() const; //Returns true if the Beneficiary didn't reach max requests
+        const string &getName() const{return name};
+        int getId() const{return id};
+        int getBeneficiaryDistance() const{return locationDistance};
+        int getMaxRequests() const{return maxRequests}; //Returns maxRequests
+        int getNumRequests() const{
+            int madeReq=0;
+            for(i=0;i<requestsId.size();i++){
+                if(requestsId[i]!=0) madeReq++; //Initialize request vectors to 0 if no request was given
+            }
+        }; //Returns num of requests the Beneficiary has made so far
+        bool canMakeRequest() const{
+            if(getNumRequests>0) return true;
+            else return false;
+            } //Returns true if the Beneficiary didn't reach max requests
         const vector<int> &getRequestsIds() const;
         int addRequest(int RequestId); //return RequestId if request was added successfully, -1 otherwise
 
