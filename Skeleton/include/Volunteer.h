@@ -1,3 +1,5 @@
+#ifndef   Volunteer.h
+#define   Volunteer.h
 #pragma once
 #include <string>
 #include <vector>
@@ -10,10 +12,10 @@ using std::vector;
 class Volunteer {
     public:
         Volunteer(int id, const string &name);
-        int getId() const;
-        const string &getName() const;
-        int getActiveRequestId() const;
-        int getCompletedRequestId() const;
+        int getId() const {return id};
+        const string &getName() const{return name};
+        int getActiveRequestId() const{return activeRequestId};
+        int getCompletedRequestId() const{return completedRequestId};
         bool isBusy() const; // Signal whether the volunteer is currently processing a Request    
         virtual bool canTakeRequest(const SupplyRequest &request) const = 0; // Signal if the volunteer can take the Request.      
         virtual void acceptRequest(const SupplyRequest &request) = 0; // Prepare for new Request(Reset activeRequestId,TimeLeft,DistanceLeft)
@@ -75,3 +77,4 @@ class CourierVolunteer: public Volunteer {
         const int distancePerStep; // The distance the volunteer does in one step
         int distanceLeft; // Distance left until the volunteer finishes his current Request
 };
+#endif 

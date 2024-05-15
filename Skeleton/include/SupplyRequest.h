@@ -1,3 +1,5 @@
+#ifndef   SupplyRequest.h
+#define   SupplyRequest.h
 #pragma once
 
 #include <string>
@@ -36,3 +38,4 @@ class SupplyRequest {
         int inventoryManagerId; //Initialized to NO_VOLUNTEER if no inventoryManager has been assigned yet
         int CourierId; //Initialized to NO_VOLUNTEER if no Courier has been assigned yet
 };
+#endif

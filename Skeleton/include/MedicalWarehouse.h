@@ -1,3 +1,5 @@
+#ifndef   MedicalWareHouse.h
+#define   MedicalWareHouse.h
 #pragma once
 #include <string>
 #include <vector>
@@ -36,3 +38,4 @@ class MedicalWareHouse {
         int beneficiaryCounter; //For assigning unique Beneficiary IDs
         int volunteerCounter; //For assigning unique volunteer IDs
 };
+#endif

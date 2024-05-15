@@ -1,3 +1,5 @@
+#ifndef   Beneficiary.h
+#define   Beneficiary.h
 #pragma once
 #include <string>
 #include <vector>
@@ -47,3 +49,4 @@ class ClinicBeneficiary: public Beneficiary {
     private:
         
 };
+#endif

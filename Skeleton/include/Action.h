@@ -1,3 +1,5 @@
+#ifndef   Action.h
+#define   Action.h
 #pragma once
 #include <string>
 #include <vector>
@@ -138,3 +140,4 @@ class RestoreWareHouse : public CoreAction {
         string toString() const override;
     private:
 };
+#endif
